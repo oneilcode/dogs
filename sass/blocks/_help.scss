@@ -1,0 +1,109 @@
+.help {
+   padding-top: 50px;
+   padding-bottom: 50px;
+   @media (max-width: 1200px) {
+      padding-top: 10px;
+   } 
+}
+.container {
+}
+.help__title {
+   text-align: center;
+   margin-bottom: 20px;
+   @media (max-width: 576px) {
+      margin-bottom: 5px;
+    }
+}
+.title {
+}
+.help__subtitle {
+   text-align: center;
+   margin-bottom: 30px;
+   
+}
+.subtitle {
+}
+.help__cards {
+}
+.animal-list {
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   @media (max-width: 1400px) {
+      justify-content: space-around;
+   }
+}
+.help__cards-list {
+   row-gap: 90px;
+   @media (max-width: 1200px) {
+      row-gap: 20px;
+   }
+}
+
+.card {
+   position: relative;
+   max-width: 475px;
+   display: flex;
+   flex-direction: column;
+   padding: 20px;
+   // margin-right: 160px;
+   cursor: pointer;
+   @media (max-width: 1720px) {
+      margin-right: 0;
+   } 
+   img {
+      display: block;
+      max-width: 425px;
+      min-height: 370px;
+      transition: 1s;
+      transition: all 0.5s ease;
+      @media (max-width: 768px) {
+        margin: auto;
+       } 
+      @media (max-width: 576px) {
+         min-height: 1px;
+         width: 100%;
+       }
+      &:hover {
+         transform: scale(1.1); /* Увеличиваем масштаб */
+         transition: all 0.5s ease;
+        }
+   }
+   &:nth-child(3n) {
+      margin-right:0;
+      &::after {
+         display: none;
+   
+      }
+   }
+   &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      top: 30%;
+      right: -80px;
+      width: 50px;
+      height: 50px;
+      background: url('../../img/icons/ball.svg')no-repeat center center;
+      opacity: 0.9;  
+      @media (max-width: 1720px) {
+           display: none;
+         }   
+      } 
+      @media (max-width: 768px) {
+        max-width: 100%;
+      } 
+      @media (max-width: 576px) {
+         padding: 0;
+       }   
+   }
+   
+.help__cards-info {
+   margin-top: 20px;
+}
+.help__cards-subtitle {
+   margin-bottom: 15px;
+   text-align: center;
+}
+.help__cards-description {
+}

@@ -1,0 +1,93 @@
+.trend {
+   padding-top: 60px;
+   padding-bottom: 50px;
+   background: url('../img/icons/heart-left.svg')no-repeat top 100% right -10%;
+   @media (max-width: 1470px) {
+      background: none;
+   } 
+   @media (max-width: 576px) {
+      padding-top: 20px;
+   } 
+}
+.container-trend {
+   display: flex;
+   justify-content: space-between;
+   @media (max-width: 1200px) {
+      flex-direction: column;
+   } 
+}
+.trend__img {
+   position: relative;
+   display: block;
+   margin: auto;
+   margin-right: 290px;
+   // &::after {
+   //    content: '';
+   //    display: block;
+   //    position: absolute;
+   //    top: -45%;
+   //    left: 20%;
+   //    max-width: 438px;
+   //    width: 100%;
+   //    min-height: 430px;
+   //    background: url('../img/icons/heart.svg')no-repeat;
+   //    z-index: -1;
+   // }
+   img {
+      display: block;
+      max-width: 545px;
+      z-index: 10;
+      @media (max-width: 1200px) {
+         width: 100%;
+         margin: 0 auto;
+         margin-bottom: 50px;
+      } 
+   }
+   @media (max-width: 1700px) {
+      margin-right: 100px;
+   } 
+   @media (max-width: 1200px) {
+      width: 100%;
+      margin-right: 0;
+   } 
+}
+.trend__info {
+   max-width: 785px;
+   @media (max-width: 1200px) {
+      max-width: 100%;
+   } 
+}
+
+
+.trend__info-title {
+   margin-bottom: 20px;
+   @media (max-width: 576px) {
+      margin-bottom: 5px;
+    }
+}
+.title {
+}
+.trend__info-subtitle {
+   margin-bottom: 20px;
+   @media (max-width: 576px) {
+      margin-bottom: 10px;
+    }
+}
+.subtitle {
+}
+.trend__info-description {
+}
+.description {
+}
+.trend__list {
+  margin-left: 20px;
+}
+.trend__item {
+   font-size: 16px;
+   line-height: 30px;
+   list-style: disc;
+   text-transform: uppercase;
+}
+.trend__item:not(:last-child) {
+   margin-bottom: 10px;
+}

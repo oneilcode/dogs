@@ -1,0 +1,248 @@
+.header {
+   padding-top: 10px;
+   padding-bottom: 60px;
+   background: url('../img/icons/heart.svg')no-repeat top 100% left 20%, url('../img/icons/circle.svg')no-repeat top 100% right -10%;
+   overflow: hidden;
+   @media (max-width: 1700px) {
+      background: none;
+   } 
+}
+
+.menu {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.menu__logo {
+   margin-right: 50px;
+}
+.menu__logo a{
+   position: relative;
+   font-family: 'Pacifico';
+   font-weight: 400;
+   font-size: 100px;
+   @media (max-width: 1140px) {
+      font-size: 90px;
+   }  
+   @media (max-width: 768px) {
+      font-size: 60px;
+   } 
+   &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      top: 45px;
+      left: 10px;
+      width: 68px;
+      height: 68px;
+      background-image: url('../../img/icons/logo-foot.svg');
+      @media (max-width: 768px) {
+         top: 40px;
+         left: 10px;
+         width: 35px;
+         height: 35px;
+         background-size: 35px 35px;
+      } 
+   }
+}
+.menu__nav {
+   margin-left: auto;
+   background: #B64C00;
+   border-radius: 15px 50px;
+   padding: 15px 30px 30px 30px;  
+   @media (max-width: 1400px) {
+      display: none;
+      position: absolute;
+      background: #B64C00;
+      border-radius: 15px 50px;
+      width: auto;
+      color: #333;
+      top: 15%;
+      right: 0;
+      padding: 50px 100px;
+      transition: all 0.2s ease;
+      z-index: 5;
+      ul {
+         display: block;
+         li {
+            text-align: center;
+         }
+      } 
+   } 
+   @media (max-width: 768px) {
+      width: 100%;
+      top: 12%;
+      padding: 30px 20px;
+   } 
+   
+}
+.menu__nav.show {
+   @media (max-width: 1400px) {
+      display: block;
+      
+   } 
+}
+.menu__nav-list {  
+   display: flex;
+}
+.close_btn {
+   display: none;
+   position: absolute;
+   top: 7%;
+   right: 7%;
+   width: 21px;
+   height: 21px;
+   background: url('../../img/icons/close.svg') no-repeat center;
+   padding: 20px;
+
+   @media (max-width: 1400px) {
+      display: block;
+   } 
+}
+.menu__nav-item {
+   position: relative;
+   padding: 15px 10px;
+   background: transparent;
+   border-radius: 15px 50px;
+   transition: all 0.5s ease;
+   &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: -15px;
+      width: 8px;
+      height: 9px;
+      background: url('../../img/icons/heart-active.svg') no-repeat;
+      margin: auto;
+      opacity: 0;
+   }
+   &:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transition: all 0.5s ease;
+   }
+   &:not(:last-child) {
+      margin-right: 25px;
+   }
+}
+.menu__nav-item:hover:after {
+   opacity: 1;
+}
+.menu__help {
+   margin-left: 75px;
+   @media (max-width: 1800px) {
+      display: none;
+   }  
+}
+.menu__help-btn {
+   width: 190px;
+   &:not(:last-child) {
+   margin-right: 30px;
+   }
+   @media (max-width: 768px) {
+      width: 100%;
+   }
+}
+.help-btn_hidden {
+   display: none;
+   @media (max-width: 1700px) {
+      display: block;
+   } 
+}
+.offer {
+   display: flex;
+   justify-content: space-between;
+   position: relative;
+   @media (max-width: 1300px) {
+     align-items: center;
+   } 
+   @media (max-width: 1200px) {
+      flex-direction: column;
+    } 
+}
+.offer__btn {
+   display: flex;
+}
+.offer__info {
+   width: 650px;
+   max-width: 100%;
+   margin-top: 100px;
+   @media (max-width: 1700px) {
+      margin-right: 100px;
+   } 
+   @media (max-width: 1400px) {
+      margin-right: 60px;
+   }
+   @media (max-width: 1300px) {
+      margin-top: 0;
+   } 
+   @media (max-width: 1200px) {
+      order: 2;
+      width: 100%;
+      margin-right: 0;
+    } 
+}
+.offer__info-title {
+   margin-bottom: 20px;
+   @media (max-width: 576px) {
+      margin-bottom: 5px;
+    }
+}
+.title {
+}
+.offer__info-subtitle {
+   margin-bottom: 20px;
+   @media (max-width: 576px) {
+      margin-bottom: 5px;
+    }
+}
+.subtitle {
+}
+.offer__img {
+   margin:0 calc(-50vw + 50%);
+   img {
+      width: 1025px;
+      max-width: 100%;
+      @media (max-width: 1200px) {
+         width: 1200px;
+         max-width: 100%;
+       } 
+   }
+   @media (max-width: 1200px) {
+      order: 1;
+      margin-bottom: 50px;
+    } 
+}
+
+.offer__info-description {
+   margin-bottom: 30px;
+}
+// .menu__mobile {
+//    position: relative;
+// }
+
+.menu__mobile_btn {
+   display: none;
+   align-items: center;
+   padding: 30px 40px;
+   font-weight: 400;
+   font-size: 16px;
+   text-transform: uppercase;
+   background: rgba(255, 255, 255, 0.2);
+   border-radius: 15px 50px;
+   &::after {
+      content: '';
+      display: inline-block;
+      width: 18px;
+      height: 12px;
+      background: url('../../img/icons/burger.svg');
+      margin-left: 10px;
+   }
+   @media (max-width: 1400px) {
+      display: flex;
+   } 
+   @media (max-width: 768px) {
+      padding: 13px 15px;
+   } 
+}
